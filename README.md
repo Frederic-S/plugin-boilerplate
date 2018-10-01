@@ -2,5 +2,5 @@
 
 #
 
-PHP 5.7
+PHP 7.2
 Wordpress 4.9
