@@ -12,6 +12,7 @@
  License: GPLv2 or later
  Text Domain: plugin-boilerplate-plugin
  */
+
 /**
  Copyright 2018 Fred Soloy  (email : fred@fredsoloy.fr)
 
@@ -28,5 +29,18 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
+
+ // Check if the plugin is accessed from outside or inside the cms
+ //if ( ! defined( 'ABSPATH' ) ) {
+ //  exit;
+ //}
+ // OR
+ //defined ('ABSPATH' ) or die ('Hey, you can\t access this file, you silly human or bot');
+
+ // OR by checking the add-action function
+ if ( ! function_exists( 'add_action' ) ) {
+   echo 'Hey, you can\t access this file, you silly human or bot';
+   exit;
+ }
 
  ?>
